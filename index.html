@@ -1,46 +1,104 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Stylesheets with Relative Paths</title>
+<title>Nick Sessa</title>
+<style>
 
-  <!-- This line is money! It points your HTML to the CSS file. -->
-  <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+.header {
+  background-color: #f2f2f2;
 
+}
+
+body {
+  background-color: gray;
+  text-align: left;
+  color: navy;
+  font-family: Times, Arial, Helvetica, sans-serif;
+}
+
+.main {
+  margin: auto;
+  background-color: #f2f2f2;
+  width: 60%;
+  position: relative;
+  padding-left: 10px;
+  text-align: left;
+  color: navy;
+  font-family: Times, Arial, Helvetica, sans-serif;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  margin: auto;
+  width: 60%;
+  background-color: #f2f2f2;
+  position: relative;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /*float: left;*/
+  color: navy;
+  text-align: center;
+  padding: 14px 16px; 
+  /*padding: 14px 0px 0px 0px;*/
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: midnightblue;
+  color: white;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* Change the color of links on focus */
+.topnav a:focus {
+  background-color: yellow;
+  color: black;
+}
+.active {
+  float: left;
+}
+.About {
+  float: right;
+}
+
+.Portfolio {
+  float: right;
+} 
+
+.Contact {
+  float: right;
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="div-head">
-        <h1>Flash Gordon</h1>
-    </div>
-    <div class="div-head">
-        <h1>About</h1>
-    </div>
-    <div class="div-head">
-        <h1>Portfolio</h1>
-    </div>
-    <div class="div-head">
-        <h1>Content</h1>
-    </div>
-  </header>
+<div class="header">
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a class="About" href="#About">About</a>
+    <a class="Portfolio" href="#Portfolio">Portfolio</a>
+    <a class="Contact" href="contact.html">Contact</a>
+  </div>
+</div>
+<div class="main">
+<h1>Student: Flash Gordon</h1>
+<hr>
+<p>I found this on w3schools.com.  It is awesome.</p>
+<p>The following is text from the the Latin Vulgate:</p>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flash_Gordon.png/250px-Flash_Gordon.png" alt="Flash Gordon" style="width:200px; float:left; margin-right:10px;">
 
-  <div class="container">
+<p style="padding-left:20px";>1 in principio creavit Deus caelum et terram 2 terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus Dei ferebatur super aquas 3 dixitque Deus fiat lux et facta est lux 4 et vidit Deus lucem quod esset bona et divisit lucem ac tenebras 5 appellavitque lucem diem et tenebras noctem factumque est vespere et mane dies unus 6 dixit quoque Deus fiat firmamentum in medio aquarum et dividat aquas ab aquis 7 et fecit Deus firmamentum divisitque aquas quae erant sub firmamento ab his quae erant super firmamentum et factum est ita 8 vocavitque Deus firmamentum caelum et factum est vespere et mane dies secundus 9 dixit vero Deus congregentur aquae quae sub caelo sunt in locum unum et appareat arida factumque est ita 10 et vocavit Deus aridam terram congregationesque aquarum appellavit maria et vidit Deus quod esset bonum</p>
 
-    <section id="main-bio">
-
-      <h2>About Me</h2>
-
-      <img id="bio-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flash_Gordon.png/250px-Flash_Gordon.png" />
-
-      <p>Flash Gordon is the hero of a space opera adventure comic strip created by and originally drawn by Alex Raymond.[1] First published January 7, 1934, the strip was inspired by, and created to compete with, the already established Buck Rogers adventure strip.[2][3][4]</p>
-
-      <p>  The Flash Gordon comic strip has been translated into a wide variety of media, including motion pictures, television, and animated series. The latest version, a Flash Gordon television series, appeared on the Syfy channel in the United States in 2007–2008. <a href="https://en.wikipedia.org/wiki/Flash_Gordon">https://en.wikipedia.org/wiki/Flash_Gordon</a></p>
-    </section>
-
-    <section id="contact-info">
+<section id="contact-info">
       <h2>Contact Info</h2>
       <ul>
         <li><strong>Email:</strong> <a href="#">someplace@gmail.com</a></li>
@@ -48,8 +106,10 @@
         <li><strong>Portfolio:</strong> <a href="#">coming soon</a></li>
       </ul>
     </section>
+
   </div>
 
 </body>
-
 </html>
+
+
