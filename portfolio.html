@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +8,12 @@
 
 .header {
   background-color: #f2f2f2;
+  box-shadow: 5px 5px 3px grey;
 
 }
 
 body {
-  background-color: gray;
+  background-color: LightGray;
   text-align: left;
   color: #4aaaa5;
   font-family: Times, Arial, Helvetica, sans-serif;
@@ -20,18 +22,20 @@ body {
 .main {
   margin: auto;
   background-color: #f2f2f2;
-  width: 960px;
-  height: 800px;
+  width: 950px;
+  height: 850px;
   position: relative;
   padding-left: 10px;
   padding-bottom: 10px;
-  padding-right: 10px;
+  /*padding-right: 10px;*/
   text-align: left;
   color: #4aaaa5;
+  text-shadow: 2px 2px 3px #1e4442;
+  box-shadow: 5px 5px 3px grey, -1px 0px 10px grey;
   font-family: Times, Arial, Helvetica, sans-serif;
   border-radius: 5px;
 }
-/* Add a black background color to the top navigation */
+/* Add a background color to the top navigation */
 .topnav {
   margin: auto;
   width: 960px;
@@ -39,6 +43,7 @@ body {
   background-color: #f2f2f2;
   position: relative;
   padding-left: 10px;
+  padding-right: 10px;
   overflow: hidden;
 }
 
@@ -46,6 +51,7 @@ body {
 .topnav a {
   /*float: left;*/
   color: #4aaaa5;
+
   text-align: center;
   padding: 14px 16px; 
   text-decoration: none;
@@ -57,15 +63,26 @@ body {
 .topnav a.active {
   background-color: #4aaaa5;
   color: white;
+  text-shadow: 2px 2px 3px #1e4442;
+  /*box-shadow: 5px 5px 3px grey;*/
   border-radius: 4px;
 }
+
+
+
+
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #1e4442;
   color: white;
   border-radius: 4px;
+  /*box-shadow: 5px 5px 3px grey;*/
 }
+
+
+
+
 
 /* Change the color of links on focus */
 .topnav a:focus {
@@ -78,6 +95,8 @@ body {
   float: left;
   background-color: #4aaaa5;
   color: white;
+  text-shadow: 2px 2px 3px #1e4442;
+  box-shadow: 5px 5px 3px grey;
 }
 
 .active {
@@ -96,17 +115,44 @@ body {
 }
 
 .resize {
+    position: relative;
     height: 200px;
     width: 300px;
     overflow: hidden;
     float: left;
-    padding: 20px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:20px;
 }
 
 .resize img {
   height: auto;
   width: 300px;
+  box-shadow: 10px 10px 5px gray, -1px 0px 10px gray;
 } 
+
+/* Centered text */
+.centered {
+  background-color: #4aaaa5;
+  color: white;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+
+  padding-top: 12px; 
+  text-decoration: none;
+  font-size: 17px;
+
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  border-radius: 4px;
+
+  /*box-shadow: 10px 10px 5px grey;*/
+
+  /*transform: translate(-50%, -50%);*/
+}
 
 </style>
 </head>
@@ -124,21 +170,27 @@ body {
     <hr>
     <div class = "resize" >
         <img src="images/FlashAndDale.jpg">
+        <div class="centered">Flash and Dale</div>
     </div>
     <div class = "resize">
         <img  src="images/FlashAndZarkov.jpg">
+        <div class="centered">Flash and Zarkov</div>
     </div>
     <div class = "resize" >
         <img  src="images/Ming.jpg">
+        <div class="centered">Ming</div>
     </div>
     <div class = "resize">
         <img  src="images/OldSchoolFlash.jpg">
+        <div class="centered">Flash Comic</div>
     </div>
     <div class = "resize" >
         <img  src="images/PrincessAura.jpg">
+        <div class="centered">Princess Aura</div>
     </div>
     <div class = "resize">
         <img  src="images/PrinceVultan.jpg">
+        <div class="centered">Prince Vultan</div>
     </div>
 
 
