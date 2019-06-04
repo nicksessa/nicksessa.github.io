@@ -13,10 +13,9 @@
 <!-- Favicon Stuff -->
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <style>
 body {
@@ -28,7 +27,7 @@ h1 {
 }
 .profilePic {
     width:auto;
-    height: 350px;
+    height: 200px;
     float:left; 
     margin-right: 20px;
     margin-bottom: 20px;
@@ -41,69 +40,40 @@ img {
     object-fit: contain;
 }
 .container {
-	width: 960px;
-	margin-top: 20px;
     background-color: white;
     border-radius: 4px;
 }
 .MainText {
-    height: 400px;
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     padding-right: 20px;
     padding-left: 20px;
     color: #777777;
 }
-.navbar-expand-sm {
-    margin: auto;
-    width: 1010px;
-    background-color: white; 
+.navbar-default .navbar-brand {
+	background-color: #4aaaa5; 
     color:white;
 }
-
-.navbar-brand {
-	/*background-color: white;*/
-    background-color: #4aaaa5; 
-    color:white;
-    box-shadow: 5px 5px 5px gray, -1px 0px 10px gray;
-    border-radius: 4px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-.nav-link {
-    text-shadow: 1px 1px 2px #1e4442;
-    background-color: white;
-    color: #4aaaa5;
-    
-}
-.nav-item {
-    padding-right: 20px;
-}
-.navbar-expand-sm .navbar-header a:hover {
+.navbar-default .navbar-header a:hover {
     background-color: #1e4442;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
-.navbar-expand-sm .navbar-nav > li > a:hover, .navbar-expand-sm .navbar-nav > li > a:focus {
-    background-color: #1e4442;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    box-shadow: 5px 5px 5px gray, -1px 0px 10px gray;
-    border-radius: 4px;
-}
-.navbar-expand-sm .navbar-nav .active a:hover {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     background-color: #1e4442;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
-
+.navbar-default .navbar-nav .active a:hover {
+    background-color: #1e4442;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
 .navContainer {
 	position: relative;
 	margin: auto;
 	/*width: 960px;*/
     /*box-shadow: 5px 5px 3px grey;*/
     text-shadow: 1px 1px 2px #1e4442;
-    background-color: white;
-    color: #4aaaa5;
 }
   
 </style>
@@ -111,27 +81,20 @@ img {
 <body>
 	<div class="navContainer">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm ">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                	<img src="https://vignette.wikia.nocookie.net/starwars/images/8/80/X-wing_Fathead.png/revision/latest/scale-to-
-
-width-down/500?cb=20161004003846" alt="logo" style="width:40px;"> Nicholas Sessa 
-
-<img src="https://png2.kisspng.com/sh/6897e99cc965e6b89386fd48f0f660ac/L0KzQYm3VsA3N6VugZH0aYP2gLBuTgN1aaMyj9N7cz33eba0hvlocKVqip9wcnHxdH7ohP1qepJxReZxcnH6fn7wjwRmepQyTdQ6OEblSIS3gsY0PGkzTasDNES8QYG4VcI5O2M8SKY8MES5R3B3jvc=/kisspng-star-wars-tie-fighter-grand-admiral-thrawn-interc-5b186b830b6348.5984491015283270430467.png" alt="logo" style="width:40px;">
-                </a>
-
+                <a class="navbar-brand" href="#">Nicholas Sessa</a>
             </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="active"><a href="index.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-  
         </div>
-    </nav>  <!-- End Navigation Bar -->
-	</div><!-- End Navigation Bar Container -->
+    </nav>
+    <!-- End Navigation Bar -->
+	</div>
     
     <!-- Creates the Overall Grid -->
     <div class="container" >
@@ -145,8 +108,7 @@ width-down/500?cb=20161004003846" alt="logo" style="width:40px;"> Nicholas Sessa
 
         <hr>  <!-- Add a horizontal line -->
         <div class="profilePic">
-        	<img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flash_Gordon.png" class="rounded float-left" style="object-fit:cover;">
-            <!-- <img src="assets/images/250px-Flash_Gordon.png" class="rounded float-left"> -->
+            <img src="assets/images/250px-Flash_Gordon.png" class="rounded float-left">
         </div>
         <div class="MainText">
             <p>1 in principio creavit Deus caelum et terram 2 terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus Dei ferebatur super aquas 3 dixitque Deus fiat lux et facta est lux 4 et vidit Deus lucem quod esset bona et divisit lucem ac tenebras 5 appellavitque lucem diem et tenebras noctem factumque est vespere et mane dies unus 6 dixit quoque Deus fiat firmamentum in medio aquarum et dividat aquas ab aquis 7 et fecit Deus firmamentum divisitque aquas quae erant sub firmamento ab his quae erant super firmamentum et factum est ita 8 vocavitque Deus firmamentum caelum et factum est vespere et mane dies secundus 9 dixit vero Deus congregentur aquae quae sub caelo sunt in locum unum et appareat arida factumque est ita 10 et vocavit Deus aridam terram congregationesque aquarum appellavit maria et vidit Deus quod esset bonum</p>
