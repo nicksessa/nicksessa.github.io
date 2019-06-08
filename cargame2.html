@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+</head>
+
+<body>
+
+    <h1>The Car Game</h1>
+    <p>Select d = Drive to work</p>
+    <p>Select w = Drive around the world</p>
+    <p>select t = Get a tune-up</p>
+    <p>select h = Honk!</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <div class="jumbotron">
+                    <h2>You selected: <span id="user-text"><strong>...Nothing.</strong></span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function reWriteStats() {
+            // The car's make?   honda
+            console.log("car make: " + car.make);
+
+            // The car's model?   fit
+            console.log("car model: " + car.model);
+
+            // The car's mileage?   3000
+            console.log("car mileage: " + car.mileage);
+            console.log("Is the car working? " + car.isWorking);
+            console.log("------------");
+            //var x = "car make: " + car.make <br> + "car model: " + car.model + "car mileage: " + car.mileage +  "";
+            return x;
+        }
+
+        var car = {
+            make: "Honda",
+            model: "Fit",
+            color: "Blue Raspberry",
+            mileage: 3000,
+            isWorking: true,
+
+            driveToWork: function () {
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 8;
+
+                alert("New mileage: " + this.mileage);
+            },
+
+            driveAroundWorld: function () {
+
+                alert("Old Mileage: " + this.mileage);
+
+                this.mileage = this.mileage + 24000;
+
+                alert("New Mileage: " + this.mileage);
+                alert("Car needs a tuneup!");
+
+                this.isWorking = false;
+            },
+
+            getTuneUp: function () {
+                alert("Car is ready to go!");
+                this.isWorking = true;
+            },
+
+            honk: function () {
+                alert("Honk! Honk!");
+            }
+        };
+
+
+        // How would we log...   console.log("")
+
+        // The car's make?   honda
+        //console.log("car make: " + car.make);
+
+        // The car's model?   fit
+        //console.log("car model: " + car.model);
+
+        // The car's mileage?   3000
+        //console.log("car mileage: " + car.mileage);
+
+        // How would we run the car's driveToWork method?  car.driveToWork
+        //car.driveToWork();
+
+        // How would we run the car's driveAroundWorld method?   car.driveAroundWorld
+        //car.driveAroundWorld();
+
+        // How would we run the getTuneUp method?   car.getTuneUp
+        //car.getTuneUp();
+
+        var userText = document.getElementById("user-text");
+
+        document.onkeyup = function (event) {
+            if (event.key == 'd') {
+                car.driveToWork();
+                var x = reWriteStats();
+                userText.textContent = "drive " + x;
+            }
+            if (event.key == 'w') {
+                car.driveAroundWorld();
+                reWriteStats();
+                userText.textContent = "drive around the world ";
+            }
+            if (event.key == 't') {
+                car.getTuneUp();
+                reWriteStats();
+                userText.textContent = "tuneup ";
+            }
+            if (event.key == 'h') {
+                car.honk();
+                reWriteStats();
+                userText.textContent = "honk ";
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
