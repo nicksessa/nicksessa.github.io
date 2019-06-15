@@ -1,0 +1,76 @@
+body {
+	position: relative;
+	background-color: #282828;
+	font-family: "Courier New", Courier, monospace;
+	color: #33FF33;
+}
+
+#title {
+	margin: auto;
+	/*width: 100%;*/
+	margin-left: -80px;
+	text-align: center;
+	/*margin-top: 20px;
+	margin-bottom: 30px;*/
+}
+
+#instruction-div, #results {
+	text-align: center;
+	font-size: 12px;
+}
+
+#wrapper {
+	margin: auto;
+
+}
+
+#main-content {
+	width: 960px;
+	margin: 0px auto 0px auto;
+}
+
+.panel {
+	background-color: #282828;
+	padding: 20px;
+	margin: 10px;
+}
+
+#word-display {
+	text-align: center;
+	font-size: 32px;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+#general-display {
+	text-align: center;
+	font-size: 16px;
+}
+
+#home-div {
+	margin-left: -160px;
+	margin-top: 20px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #33FF33;
+}
+
+a:visited{
+	text-decoration: none;
+	color: #33FF33;
+	
+}
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	color: #d6ff31;
+}
+
+#title:hover {
+color: #d6ff31;
+}
+
