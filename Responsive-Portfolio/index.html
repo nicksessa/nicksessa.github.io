@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nick Sessa - Responsive Project</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/sillyfooter.css">
+<style>
+
+.header {
+  background-color: #f2f2f2;
+
+}
+
+body {
+  background-color: black;
+  background-image: url("assets/images/stars_01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+  color: #4aaaa5;
+  font-family: Times, Arial, Helvetica, sans-serif;
+}
+
+.main {
+  margin: auto;
+  background-color: #f2f2f2;
+  width: 960px;
+  height: 600px;
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  color: #777777;
+  font-family: Times, Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.MainText {
+  padding-right: 20px;
+
+}
+
+.profilePic {
+  box-shadow: 5px 5px 3px grey, -1px 0px 10px grey;
+  border-radius: 5px;
+}
+
+#contact-info {
+  float: left;
+  /* margin-left: 10px; */
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  margin: auto;
+  width: 960px;
+  background-color: #f2f2f2;
+  position: relative;
+  padding-left: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /*float: left;*/
+  color: #4aaaa5;
+  text-align: center;
+  padding: 14px 16px; 
+  /*padding: 14px 0px 0px 0px;*/
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4aaaa5;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #1e4442;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Change the color of links on focus */
+.topnav a:focus {
+  background-color: yellow;
+  color: black;
+  border-radius: 4px;
+}
+.active {
+  float: left;
+}
+.About {
+  float: right;
+}
+
+.Portfolio {
+  float: right;
+} 
+
+.Contact {
+  float: right;
+
+}
+
+.footer {
+  background-color: #f2f2f2;
+  /*border: 2px solid red;*/
+  width: 960px;
+  height: 160px;
+  /*margin-top: 20px;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*float: left;*/
+  /*padding-left: 10px;*/
+  border-radius: 4px;
+}
+
+/* <!-- CSS for CRAZY FOOTER!!! -->  */
+
+#frame {
+  /*opacity: 0.5;*/
+  
+  background-image: url("assets/images/stars_02.jpg");
+  /*border: 2px solid red;*/
+  /*margin-left: 20px;*/
+  width: 960px;
+  height: 160px;
+  /*padding: 20px;*/
+  /*float: left;*/
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 100%, 100%);
+  position: relative;
+  text-align: center; 
+  /*margin: 1px 0;*/
+}
+  #image-container {
+    top: 13%;
+    left: 95%;
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 2.5s;
+    -webkit-transition-duration: 2.5s;
+    -o-transition-duration: 2.5s;
+    transition-duration: 2.5s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -moz-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+    transform: translate(-50%, -50%)
+  }
+  #frame:hover #image-container {
+    left: 5%;
+    top: 90%;
+  }
+  #frame:hover #image-container2 {
+    left: 90%;
+    top: 80%;
+  }
+  #frame:hover #image-container3 {
+    left: 20%;
+    top: 60%;
+  }
+  #frame:hover #image-container4 {
+    left: 15%;
+    top: 80%;
+  }
+  #frame:hover #x-wing-2-image-container5 {
+    left: 9%;
+    top: 65%;
+  }
+  #frame:hover #falcon-image-container6 {
+    left: 70%;
+    top: 30%;
+  }
+
+  #image-container2 {
+    top: -30%;
+    left: -10%;
+
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+
+
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*height: 60px;*/
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    transition-duration: 2s;
+
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+
+    -moz-transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+    -o-transition-delay: 2s;
+    transition-delay: 2s;
+    transform: translate(-50%, -50%)
+  }
+
+#image-container3 {
+    top: -60%;
+    left: -60%;
+
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*height: 60px;*/
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 7s;
+    -webkit-transition-duration: 7s;
+    -o-transition-duration: 7s;
+    transition-duration: 7s;
+
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+
+    -moz-transition-delay: 4s;
+    -webkit-transition-delay: 4s;
+    -o-transition-delay: 4s;
+    transition-delay: 4s;
+    transform: translate(-50%, -50%)
+  }
+
+#image-container4 {
+  top: 1%;
+    left: 105%;
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 2.5s;
+    -webkit-transition-duration: 2.5s;
+    -o-transition-duration: 2.5s;
+    transition-duration: 2.5s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -moz-transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s;
+    -o-transition-delay: 1.5s;
+    transition-delay: 1.5s;
+    transform: translate(-50%, -50%)
+  }
+#x-wing-2-image-container5 {
+  top: -20%;
+    left: 80%;
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 2.5s;
+    -webkit-transition-duration: 2.5s;
+    -o-transition-duration: 2.5s;
+    transition-duration: 2.5s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -moz-transition-delay: 1s;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s;
+    transform: translate(-50%, -50%)
+  }
+
+#falcon-image-container6 {
+    top: -60%;
+    left: -60%;
+
+    display: inline-block;
+    /*height: 60px;*/
+    /*vertical-align: middle;*/
+    /*border: 2px solid red;*/
+    width: 60px;
+    /*height: 60px;*/
+    /*padding: 20px;*/
+    /*background-color: hsl(0, 68%, 32%);*/
+    font-size: 12px;
+    position: absolute;
+
+    -moz-transition-duration: 5.5s;
+    -webkit-transition-duration: 5.5s;
+    -o-transition-duration: 5.5s;
+    transition-duration: 5.5s;
+
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+
+    -moz-transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+    -o-transition-delay: 2s;
+    transition-delay: 2s;
+    transform: translate(-50%, -50%)
+  }
+
+  #x-wing {
+    /*background: #3A6F9A;*/
+    /*vertical-align: middle;*/
+    max-height: 60px;
+    max-width: 60px;
+  }
+  #x-wing-2 {
+    /*background: #3A6F9A;*/
+    /*vertical-align: middle;*/
+    max-height: 60px;
+    max-width: 60px;
+  }
+
+  #tie-int {
+    /*background: #3A6F9A;*/
+    /*vertical-align: middle;*/
+    max-height: 90px;
+    max-width: 90px;
+  }
+  #tie-int-2 {
+    /*background: #3A6F9A;*/
+    /*vertical-align: middle;*/
+    max-height: 60px;
+    max-width: 60px;
+  }
+
+  #starDestroyer {
+    max-height: 350px;
+    max-width:350px;
+  }
+
+  #falcon {
+    max-height: 150px;
+    max-width:150px;
+  }
+
+/* <!-- End CSS for CRAZY FOOTER!!! -->  */
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+<div class="header">
+  <div class="topnav">
+    <a class="active" href="index.html">Nicholas Sessa</a>
+    <a class="About" href="index.html">About</a>
+    <a class="Portfolio" href="portfolio.html">Portfolio</a>
+    <a class="Contact" href="contact.html">Contact</a>
+  </div>
+</div>
+<div class="main">
+  <h1 style="color:#4aaaa5;" >Student: Flash Gordon</h1>
+  <hr>
+  <p>I found this on w3schools.com.  It is awesome.</p>
+  <p>The following is text from the the Latin Vulgate. (After all, Cicero was cool, but Jerome was cooler.)</p>
+  <img class="profilePic" src="https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flash_Gordon.png/250px-Flash_Gordon.png" alt="Flash Gordon" style="width:200px; float:left; margin-right:10px;">
+  <div class="MainText">  <!-- Main Text -->
+  <p style="padding-left:20px";>1 in principio creavit Deus caelum et terram 2 terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus Dei ferebatur super aquas 3 dixitque Deus fiat lux et facta est lux 4 et vidit Deus lucem quod esset bona et divisit lucem ac tenebras 5 appellavitque lucem diem et tenebras noctem factumque est vespere et mane dies unus 6 dixit quoque Deus fiat firmamentum in medio aquarum et dividat aquas ab aquis 7 et fecit Deus firmamentum divisitque aquas quae erant sub firmamento ab his quae erant super firmamentum et factum est ita 8 vocavitque Deus firmamentum caelum et factum est vespere et mane dies secundus 9 dixit vero Deus congregentur aquae quae sub caelo sunt in locum unum et appareat arida factumque est ita 10 et vocavit Deus aridam terram congregationesque aquarum appellavit maria et vidit Deus quod esset bonum</p>
+    <section id="contact-info">
+      <h2>Contact Info</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="#" style="color: #1e4442;">someplace@gmail.com</a></li>
+        <li><strong>Github:</strong> <a href="#" style="color: #1e4442;">sampleName</a></li>
+        <li><strong>Portfolio:</strong> <a href="#" style="color: #1e4442;">coming soon</a></li>
+      </ul>
+    </section>
+  </div>  <!-- END Main Text -->
+</div> <!-- END Main Container -->
+
+<div class="footer">
+  <div id="frame">
+    <div id="image-container">
+      <img id="x-wing"  src="https://vignette.wikia.nocookie.net/starwars/images/8/80/X-
+
+wing_Fathead.png/revision/latest/scale-to-width-down/500?cb=20161004003846" style="width:60px;">
+    </div>
+    <div id="image-container2">
+      <img id="tie-int" src="assets/images/tie-int-02-transparent.png" style="width:80px;">
+    </div>
+    <div id="image-container3">
+      <img id="starDestroyer" src="assets/images/star-destroyer.png";>
+    </div>
+    <div id="image-container4">
+      <img id="tie-int-2" src="assets/images/tie-int-06a.png";>
+    </div>
+    <div id="x-wing-2-image-container5">
+      <img id="x-wing-2"  src="https://vignette.wikia.nocookie.net/starwars/images/8/80/X-
+
+wing_Fathead.png/revision/latest/scale-to-width-down/500?cb=20161004003846" style="width:60px;">
+    </div>
+    <div id="falcon-image-container6">
+      <img id="falcon" src="assets/images/millennium-falcon.png";>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
+

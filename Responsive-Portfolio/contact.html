@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nick Sessa</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+
+.header {
+  background-color: #f2f2f2;
+
+}
+
+body {
+  background-color: gray;
+  text-align: left;
+  color: #4aaaa5;
+  font-family: Times, Arial, Helvetica, sans-serif;
+}
+
+.main {
+  margin: auto;
+  background-color: #f2f2f2;
+  width: 960px;
+  height: 800px;
+  position: relative;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  text-align: left;
+  color: #4aaaa5;
+  font-family: Times, Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  margin: auto;
+  width: 960px;
+  background-color: #f2f2f2;
+  position: relative;
+  padding-left: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  /*float: left;*/
+  color: #4aaaa5;
+  text-align: center;
+  padding: 14px 16px; 
+  /*padding: 14px 0px 0px 0px;*/
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4aaaa5;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #1e4442;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Change the color of links on focus */
+.topnav a:focus {
+  background-color: yellow;
+  color: black;
+  border-radius: 4px;
+}
+
+.Home {
+  float: left;
+  background-color: #4aaaa5;
+  color: white; 
+}
+
+.active {
+  float: right;
+}
+
+.About {
+    float: right;
+}
+.Portfolio {
+  float: right;
+} 
+
+.Contact {
+  float: right;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#Message {
+    height: 200px;
+    text-align: top left;
+}
+
+input[type=submit] {
+  width: 100px;
+  background-color: #4aaaa5;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #1e4442;
+}
+
+</style>
+
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+<div class="header">
+  <div class="topnav">
+    <a class="Home" style="color:white;" href="index.html">Nicholas Sessa</a>
+    <a class="About" href="index.html">About</a>
+    <a class="Portfolio" href="portfolio.html">Portfolio</a>
+    <a class="active" href="contact.html">Contact</a>
+  </div>
+</div>
+<div class="main">
+    <h1>Contact</h1>
+    <hr>
+    <div>
+        <!-- <form action="/action_page.php"> -->
+          <label for="fname">Name</label>
+          <input type="text" id="YourName" name="YourName" placeholder="Your full name...">
+      
+          <label for="eMail">eMail</label>
+          <input type="text" id="eMail" name="eMail" placeholder="example@gmail.com">
+      
+          <label for="Message">Message</label>
+          <input type="text" id="Message" name="message" placeholder="message here...">
+
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>   
+
+
+</div>
+
+</body>
+</html>
+
+
