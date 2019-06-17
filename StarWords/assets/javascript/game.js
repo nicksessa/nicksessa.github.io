@@ -16,10 +16,12 @@ var guessedLetters = [];
 //var newGame = true;
 var gameOver = false;
 var resultLine = "                  ";
+var hintText = "    ";
 
 var blinkElements = document.getElementsByClassName("blinking");
 //var resultLineElements = document.getElementsByClassName("result-line");
 var resultLineElement = document.getElementById("result-line");
+var hintElement = document.getElementById("hint");
 
 var validGuesses = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 
 
@@ -36,6 +38,17 @@ var wordList = [
 	"tatooine"
 ];
 
+var hints = [
+	"  Hint: ...that's no moon.  ",
+	"  Hint: a type of spaceship ",
+	"       Hint: a person       ",
+	"       Hint: a planet       ",
+	"       Hint: a person       ",
+	"       Hint: a person       ",
+	"  Hint: a type of spaceship ",
+	"       Hint: a planet       "
+]
+
 var theWord = "";
 
 // this function resets the screen to the default which is the start of the game.
@@ -48,11 +61,18 @@ function initializeScreen() {
 	gameOver = false;
 	resultLine = "                    ";
 	theWord = "";
+	hintText = "";
 
 	//get word from the wordList array above
 	theWord = wordList[Math.floor(Math.random() * wordList.length)];
 	
 	console.log("the word is: " + theWord);
+
+	// get the hint associated with the word: get the index
+	var theIndex = wordList.indexOf(theWord);
+	// now get the value
+	hintText = hints[theIndex];
+
 
 	// set the array visibleLetters to contain all false values for each element in the array
 	for (var i = 0; i < theWord.length; i++) {
@@ -71,6 +91,9 @@ function initializeScreen() {
 		}
 	}
 	wordDisplayLettersElement.textContent = tempString;
+
+	// display the hint
+	hint.textContent = hintText;
 
 	console.log("tempstring = " + tempString);
 
