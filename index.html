@@ -23,8 +23,10 @@ body {
     font-family: 'Georgia', Times, Times New Roman, serif;
     background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/dark-paths.png");
 }
-h1 {
+
+h1, h2 {
 	text-shadow: 1px 1px 2px #1e4442;
+	color: #4aaaa5;
 }
 .profilePic {
     width:auto;
@@ -40,12 +42,7 @@ img {
     height: 100%;
     object-fit: contain;
 }
-.container {
-	width: 960px;
-	margin-top: 20px;
-    background-color: white;
-    border-radius: 4px;
-}
+
 .MainText {
     height: 400px;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -106,6 +103,34 @@ img {
     color: #4aaaa5;
 }
   
+
+.btn {
+	background-color: #4aaaa5;
+}
+
+  /* Icon when the collapsible content is shown */
+  .btn:after {
+    font-family: "Glyphicons Halflings";
+    content: "\2212";
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .btn.collapsed:after {
+    content: "\2b";
+  }
+  
+
+
+.container {
+	width: 960px;
+	margin-top: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -114,12 +139,12 @@ img {
     <nav class="navbar navbar-expand-sm ">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
                 	<img src="https://vignette.wikia.nocookie.net/starwars/images/8/80/X-wing_Fathead.png/revision/latest/scale-to-
 
 width-down/500?cb=20161004003846" alt="logo" style="width:40px;"> Nicholas Sessa 
 
-<img src="tie_int-01.png" alt="logo" style="width:40px;">
+<img src="https://vignette.wikia.nocookie.net/starwars/images/f/f5/TIE_Interceptor_BF.png/revision/latest/scale-to-width-down/499?cb=20170501054325" alt="logo" style="width:40px;">
                 </a>
 
             </div>
@@ -133,6 +158,8 @@ width-down/500?cb=20161004003846" alt="logo" style="width:40px;"> Nicholas Sessa
     </nav>  <!-- End Navigation Bar -->
 	</div><!-- End Navigation Bar Container -->
     
+
+
     <!-- Creates the Overall Grid -->
     <div class="container" >
         <!-- First Row -->
@@ -144,13 +171,143 @@ width-down/500?cb=20161004003846" alt="logo" style="width:40px;"> Nicholas Sessa
         </div>  <!-- End of the First Row -->
 
         <hr>  <!-- Add a horizontal line -->
-        <div class="profilePic">
+
+	<div class="row">
+	<div class="col-md-4">
+
+          <div class="profilePic">
         	<img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flash_Gordon.png" class="rounded float-left" style="object-fit:cover;">
             <!-- <img src="assets/images/250px-Flash_Gordon.png" class="rounded float-left"> -->
-        </div>
-        <div class="MainText">
-            <p>1 in principio creavit Deus caelum et terram 2 terra autem erat inanis et vacua et tenebrae super faciem abyssi et spiritus Dei ferebatur super aquas 3 dixitque Deus fiat lux et facta est lux 4 et vidit Deus lucem quod esset bona et divisit lucem ac tenebras 5 appellavitque lucem diem et tenebras noctem factumque est vespere et mane dies unus 6 dixit quoque Deus fiat firmamentum in medio aquarum et dividat aquas ab aquis 7 et fecit Deus firmamentum divisitque aquas quae erant sub firmamento ab his quae erant super firmamentum et factum est ita 8 vocavitque Deus firmamentum caelum et factum est vespere et mane dies secundus 9 dixit vero Deus congregentur aquae quae sub caelo sunt in locum unum et appareat arida factumque est ita 10 et vocavit Deus aridam terram congregationesque aquarum appellavit maria et vidit Deus quod esset bonum</p>
-        </div>
+          </div>
+	</div>   <!-- END of the first column in the second row -->
+
+<div class="col-md-8">   <!-- start of the second column in the second row -->
+
+
+<div class="wrapper center-block">
+<h1>Summary</h1>
+<p>With more than 20 years professional experience as a Programmer Analyst, Team Leader, Software Engineer, and Systems Analyst, I have extensive knowledge and experience on analysis, development and team management.  I've worked in the financial sector for entities such as Fannie Mae and Freddie Mac.  I've also worked for Military/Aerospace companies as a contractor such as Boeing, ITT Electronic Warefare Systems, Honeywell and GE.  I've also had experience in the insurance industry working for companies such as MetLife and Chubb. </p>
+<hr>
+  <h2>Experience</h2>
+  <hr>
+  <div class="Job-Div">
+  <div >
+  	<div class="row">
+    	<div class="col-sm-3 col-md-3">  <!-- col 1 div -->
+        	<p> December 2005 - Present </p>
+        </div>  <!-- col 1 div -->
+        <div class="col-sm-6 col-md-6">  <!-- col 2 div -->
+        	<div class="row">  <!-- row 1 col 2 -->
+            	<p style="font-size: 20px"><strong>Systems Analyst</strong></p>
+            </div>  <!-- row 1 col 2 -->
+            <div class="row">  <!-- row 2 col 2 -->
+            	<p><em>Black Sheep Squadron</em></p>
+            </div>  <!-- row 2 col 2 -->
+
+            <div class="row">  <!-- row 3 col 2 -->
+                <button type="button" class="btn btn-sm btn-info collapsed" data-toggle="collapse" data-target="#job1">Responsibilities</button>
+	    </div>
+
+		<div class="row" >
+                <div id="job1" class="collapse">
+                    <ul class="my-list-group">
+                      <li >One</li>
+                      <li >Two</li>
+                      <li >Three</li>
+                    </ul>
+                </div>
+		</div>
+            </div>  <!-- END row 3 col 2 -->
+       </div> <!-- col 2 div -->
+    </div>  <!-- row div -->
+    </div>
+  </div>  <!-- Job-Div -->
+  <br/>
+  <div class="Job-Div">
+  <div >
+  	<div class="row">
+    	<div class="col-sm-3 col-md-3">  <!-- col 1 div -->
+        	<p> January 1999 - December 2005 </p>
+        </div>  <!-- col 1 div -->
+        <div class="col-sm-6 col-md-6">  <!-- col 2 div -->
+        	<div class="row">  <!-- row 1 col 2 -->
+            	<p style="font-size: 20px"><strong>Software Engineer</strong></p>
+            </div>  <!-- row 1 col 2 -->
+            <div class="row">  <!-- row 2 col 2 -->
+            	<p><em>Acme Inc.</em></p>
+            </div>  <!-- row 2 col 2 -->
+
+            <div class="row">  <!-- row 3 col 2 -->
+                <button type="button" class="btn btn-sm btn-info collapsed" data-toggle="collapse" data-target="#job2">Responsibilities</button>
+	    </div>
+
+	    <div class="row">
+                <div id="job2" class="collapse">
+                    <ul class="my-list-group">
+                      <li>One</li>
+                      <li>Two</li>
+                      <li>Three</li>
+                    </ul>
+                </div>
+            </div>  <!-- END row 3 col 2 -->
+       </div> <!-- col 2 div -->
+    </div>  <!-- row div -->
+    </div>
+  </div>  <!-- Job-Div -->
+
+<hr>
+  <h2>Education</h2>
+<hr>
+  
+<div class="education-div">
+	<div class="row">
+		<div class="col-md-3">
+			<p>November 2019</p>
+		</div>
+		<div class="col-md-8">
+			<div class="row">
+				<p><strong>Rutgers</strong></p>
+			</div>
+			<div class="row">
+				<p>Major: Web Developer</p>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<p>May 2019</p>
+		</div>
+		<div class="col-md-8">
+			<div class="row">
+				<p><strong>Warren County College</strong></p>
+			</div>
+			<div class="row">
+				<p>Major: History</p>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
+
+
+</div>  <!-- Wrapper div -->
+
+
+</div>  <!-- END of the SECOND column in the second row -->
+</div>  <!-- END of the SECOND row -->
+
+
     </div>  <!-- End of the Container -->
+
+
+
+
 </body>
 </html>
