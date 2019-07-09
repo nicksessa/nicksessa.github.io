@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .btn {
+      margin: 5px;
+    }
+    .navbar input[type=text] {
+      /*float: right;*/
+      padding: 6px;
+      margin-top: 6px;
+      margin-right: 16px;*/
+      border: none;
+      font-size: 17px;
+    }
+    
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 950px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    
+    img {
+      margin: 5px;
+      cursor: pointer;
+    }
+    #image-div {
+      padding: 5px;
+    }
+    #gifs-appear-here {
+      margin-right: 10px;
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+        <button id="add-thing" class="btn btn-info navbar-btn">Add Something</button>
+        <input id="input-thing" type="text" placeholder="">
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- the following might be useful someday -->
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>  -->
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+      <p><a href="#"></a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome to Giphy Land!</h1>
+      
+      <!-- here is where the buttons go -->
+      <div id="button-container"> buttons go here </div>
+      
+      <hr>
+          <!-- Gifs will be placed here -->
+      <div id="gifs-appear-here"></div>
+      
+
+    </div>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p></p>
+</footer>
+
+
+
+<script type="text/javascript">
+      // Initial array of random people and things
+      var randomThings = ["Conan the barbarian", "Zorro", "Marvin the Martian", "The Imperial March", "Gilligan", "Oscar the Grouch", "Batman", "Wonder Woman"];
+      
+      // Calling the renderButtons function to display the intial buttons
+      renderButtons();
+      
+      // Adding a click event listener to all elements with a class of "junk-btn"
+      $(document).on("click", ".things-btn", displayThings);
+      
+      
+      // ---------------------------------------------------------
+      function renderButtons() {
+
+        // Deleting the div prior to adding new buttons to prevent duplicate buttons
+        $("#button-container").empty();
+
+        // Looping through the array
+        for (var i = 0; i < randomThings.length; i++) {
+
+          // dynamicaly generate buttons for each element in the array
+          var a = $("<button>");
+          a.addClass("things-btn btn btn-success");
+          a.attr("data-name", randomThings[i]);
+          a.text(randomThings[i]);
+          $("#button-container").append(a);
+        }
+      }
+      
+      // ---------------------------------------------------------
+      
+      function displayThings() {
+        // clear the gifs-appear-here div
+        document.getElementById("gifs-appear-here").innerHTML = "";
+        var buttonName = $(this).attr("data-name");
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + buttonName + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=10";
+
+        // Creating an AJAX call for the specific button being clicked
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+        
+        
+          // first thing we need to do is create a row div and add it to the gifs-appear-here div
+          var rowDiv1 = $("<div class='row' id='rowDiv1'>")
+          $("#gifs-appear-here").append(rowDiv1);
+
+          var results = response.data;
+          // Looping over every result item
+          for (var i = 0; i < results.length; i++) {
+            // Console out the response data to see what else we need, such as the stills
+            console.log(results[i])
+            // if counter is divisible by 4 then create a new row
+            if (i % 4 == 0) {
+              //var newRowDiv = $("<div class='row'");
+              
+            }
+            // Creating a div to hold the images
+            var gifDiv = $("<div class='image-div col-lg-4 col-md-4 col-xs-4'>");
+            //gifDiv.addClass
+            //var gifDiv = document.getElementById("gifs-appear-here");
+            var rating = results[i].rating;
+
+            // create an element to hold the rating
+            var imageRating = $("<p>").text("Rating: " + rating);
+            
+            // attach the image rating element to the image div (gifDiv)
+            gifDiv.append(imageRating);
+
+            // Creating an image tag
+              var imageTag = $("<img>");
+
+              imageTag.attr("data-animate", results[i].images.fixed_height.url);
+              imageTag.attr("data-still", results[i].images.fixed_height_still.url)
+              imageTag.attr("src", results[i].images.fixed_height_still.url)
+              //junkImage.attr("class", "gif")
+              imageTag.addClass("gif img-responsive");
+              
+              imageTag.attr("data-state", "still")
+
+              // Append the element we created to the "gifDiv" div
+             // gifDiv.append(p);
+              gifDiv.append(imageTag);
+              
+              // add a new row after4 images
+              if (i % 4 == 0) {
+                //var newRowDiv = $("<div class='row'");
+                
+              }
+
+              // Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
+              $("#rowDiv1").prepend(gifDiv);
+
+          }
+        });
+
+      }
+      
+      // ---------------------------------------------------------
+      
+      // add the onclick event for the images to switch from still to animated gifs
+      $(document).on("click", ".gif", function() {
+        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+        var state = $(this).attr("data-state");
+        console.log("the state of the gif is: " + state)
+        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+        // Then, set the image's data-state to animate
+        // Else set src to the data-still value
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+      });
+      
+      // ---------------------------------------------------------
+      
+      // This function handles events when the Submit button is clicked
+      $("#add-thing").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var newThing = $("#input-thing").val().trim();
+        if (newThing != "") {
+          var newThing2 = newThing.toLowerCase()
+          var foundDuplicate = false;
+          for(var i = 0; i < randomThings.length; i++) {
+            var n = randomThings[i].toLowerCase()
+            if ( n == newThing2) {
+              foundDuplicate = true;
+            }
+          }
+          
+          if (!foundDuplicate) {
+          // Adding text from the textbox to our array
+            randomThings.push(newThing);
+            // Calling renderButtons which handles the processing of the array
+            renderButtons();
+          }
+        }
+      });
+        
+</script>
+
+
+
+
+
+</body>
+</html>
