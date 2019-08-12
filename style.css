@@ -32,6 +32,13 @@ a:focus {
     transition: all 0.3s;
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -10px;
+  visibility: hidden;
+}
+
 .navbar {
     padding: 15px 10px;
     background: #fff;
