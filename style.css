@@ -88,6 +88,7 @@ section {
     background: #7386D5;
     background: #203042;
     color: #fff;
+    color: yellow;
     transition: all 0.3s;
 }
 
@@ -199,7 +200,6 @@ a.article:hover {
 */
 
 
-
 #myLogo {
     text-align: center;
     font-family: 'IM Fell English SC', serif;
@@ -272,11 +272,16 @@ img {
 }
 .card:hover {
 	box-shadow: 10px 10px 5px gray, -1px 0px 10px gray;
+
 }
 
 .card a {
   background: #203042;
   color: #fff;
+}
+
+.card a:hover {
+color: yellow;
 }
 
 .card-text {
@@ -332,10 +337,12 @@ img {
     #content {
         width: 100%;
     }
+/*
     #content.active {
         width: calc(100% - 250px);
     }
-    #sidebarCollapse span {
+*/
+    #sidebar {
         display: none;
     }
 }
