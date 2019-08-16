@@ -345,4 +345,7 @@ color: yellow;
     #sidebar {
         display: none;
     }
+    #sidebarCollapse  {
+        display: none;
+    }
 }
