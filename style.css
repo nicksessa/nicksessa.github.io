@@ -39,7 +39,9 @@ a.anchor {
   visibility: hidden;
 }
 
-.navbar {
+.navbar { 
+    position: sticky;
+    top: 20px;
     padding: 15px 10px;
     background: #fff;
     border: none;
@@ -61,12 +63,17 @@ a.anchor {
     margin: 40px 0;
 }
 
+#navbar {
+  opacity: 1.0;
+  z-index: 10;
+}
 
 section {
 	padding: 60px 0;
 	position: relative;
         width: 100%;
 }
+
 
 
 /* ---------------------------------------------------
@@ -227,6 +234,7 @@ a.article:hover {
     width: 100%;
 }
 
+/*
 .bg {
   //background-image: url("./assets/images/The_Ruins_of_Holyrood_Chapel_1824.jpg");
   width: 100%;
@@ -235,7 +243,7 @@ a.article:hover {
   background-repeat: no-repeat;
   background-size: cover;
 
-}
+}*/
 
 /* ---------------------------------------------------
     ABOUT SECTION
@@ -348,4 +356,9 @@ color: yellow;
     #sidebarCollapse  {
         display: none;
     }
+
+
+
+
+
 }
