@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<style>
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: blue;
+}
+
+#testBtn {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+#testBtn:hover {
+  color: blue;
+  background-color: gray;
+}
+
+</style>
+</head>
+<body>
+
+<p>Click on the icon to toggle between thumbs-up and thumbs-down (like/dislike):</p>
+
+<i onclick="myFunction(this)" class="fa fa-angle-double-up"></i>
+<br>
+<i onclick="myFunction1(this)" class="fa fa-angle-up"></i>
+<br>
+<i onclick="myFunction2(this)" class="fa fa-thumbs-up"></i>
+<br>
+<div id="testBtn" class="btn btn-warning">test
+  <i id="theIcon" class="fa fa-angle-double-left"></i>
+</div>
+
+<script>
+
+function myFunction(x) {
+  x.classList.toggle("fa-angle-double-down");
+}
+
+function myFunction1(x) {
+  x.classList.toggle("fa-angle-down");
+}
+
+function myFunction2(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+
+$("#testBtn").click(function(){
+  //alert("The div was clicked.");
+  $(this).find('i').toggleClass('fa-angle-double-left fa-angle-double-right')
+});
+
+</script>
+</body>
+</html>
+
