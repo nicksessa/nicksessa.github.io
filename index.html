@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IM Fell English SC&effect=fire">
 
 
+
+
 </head>
 
 <body>
@@ -60,7 +62,8 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="https://nicholas.sessa.github.io/my-resume (7).pdf" class="download">Download Resume</a>
+                    <!-- <a href="https://nicholas.sessa.github.io/my-resume (7).pdf" class="download">Download Resume</a> -->
+                    <button id="viewResume" class="btn btn-primary">View Resume</button>
                 </li>
             </ul>
         </nav>
@@ -68,26 +71,23 @@
         <!-- Page Content  -->
 
 
-
-
-
-
 <div class="w3-container">
   <div class="bg">
     <!-- <img src="./assets/images/The_Ruins_of_Holyrood_Chapel_1824_c.jpg" alt="Hollyrood Chapel" style="width: 100%">  -->
   </div>
 
-
         <div id="content">
 
-
-
-            <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav id="navbar" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
 
-                     <button type="button" id="sidebarCollapse" class="btn btn-info active"> 
-                        <i class="fas fa-angle-double-left"></i> 
-                    </button> 
+                     <!-- <button type="button" id="sidebarCollapse" class="btn btn-info active"> 
+                        <i class="fa fa-angle-double-left"></i> 
+                    </button> -->
+
+                     <div id="sidebarCollapse" class="btn btn-info active" onclick="myFunction()"> 
+                        <i class="fa fa-angle-double-left"></i> 
+                    </div> 
 
 
                   <!--  <span id="#sidebarCollapse" class="active"> -->
@@ -114,7 +114,8 @@
                                 <a class="nav-link" href="#contact">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://nicholas.sessa.github.io/my-resume (7).pdf" class="nav-link download">Download Resume</a>
+                                <!-- <a href="https://nicholas.sessa.github.io/my-resume (7).pdf" class="nav-link download">Download Resume</a> -->
+                                <button id="viewResume1" class="btn">View Resume</button>
                             </li>
                         </ul>
                     </div>
@@ -143,6 +144,12 @@
                   <p>Proficient: JavaScript, JQuery, Node, Shell Scripting</p>
                   <p>Familiar with: MySql, Oracle, VB, .Net, C, COBOL, CICS, JCL, DB2</p>
                   <p>Requirements Management: Rational DOORS DBA </p>
+
+              <button type="button" id="viewResumeInline-btn" class="btn btn-info" data-toggle="collapse" data-target="#resumeDiv">View Resume</button>
+              <div id="resumeDiv" class="collapse">
+                <iframe src="./my-resume (7).pdf" width="100%" height="500px"></iframe>
+              </div>
+
             </div>
 
             <div class="line"></div>
@@ -364,6 +371,28 @@
   </div>  <!-- end of the container -->
 </section>
 
+
+
+
+      <!-- Modal to display the resume -->
+      <div id="viewResumeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Resume for Nicholas V Sessa</h1>
+              <button id="closeButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            <div class="modal-body">
+              <iframe src="./my-resume (7).pdf" width="100%" height="500px">
+              </iframe>
+            <div class="modal-footer">
+              <button id="closeButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
         </div>
     </div>
 
@@ -378,15 +407,30 @@
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
+
+
+
     <script type="text/javascript">
+
+    $("#viewResume").on("click", function () {
+      $("#viewResumeModal").modal("toggle");
+    });
+    $("#viewResume1").on("click", function () {
+      $("#viewResumeModal").modal("toggle");
+    });
+
+
+function myFunction() {
+  var x = document.getElementById("sidebarCollapse").firstElementChild
+  //x.classList.toggle("fa-angle-double-right")
+  $(x).toggleClass('fa-angle-double-left fa-angle-double-right')
+}
+
 
 /*
 window.onscroll = function() {myFunction()};
-
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
-
-
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
@@ -395,25 +439,21 @@ function myFunction() {
   }
 }
 */
-
         $(document).ready(function () {
             $("#sidebar").mCustomScrollbar({
                 //theme: "minimal"
                 theme: "32-thick"
             });
-
             $('#sidebarCollapse').on('click', function () {
+                //$(this).find('i').toggleClass('fa-angle-double-left fa-angle-double-right');
+
                 $('#sidebar, #content').toggleClass('active');
-                //$(this).find('i').toggleClass('fa-angle-double-left').toggleClass('fa-angle-double-right');
-                $('#sidebarCollapse').find('i').toggleClass('fa-angle-double-left fa-angle-double-right');
+                
+                //$('#sidebarCollapse').find('i').toggleClass('fa-angle-double-left fa-angle-double-right');
                 $('#sidebarCollapse').toggleClass('active');
+                
                 $('.collapse.in').toggleClass('in');
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-
-
-
-
-
 
 
 /*
@@ -424,8 +464,6 @@ if (icon.hasClass('fa-angle-double-left')) {
   icon.removeClass('fa-angle-double-right').addClass("fa-angle-double-left");
 }
 */
-
-
             });
         });
     </script>
