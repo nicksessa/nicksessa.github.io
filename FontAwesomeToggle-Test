@@ -5,9 +5,10 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 
 <style>
 .fa {
@@ -20,12 +21,12 @@
   color: blue;
 }
 
-#testBtn {
+#testBtn, #testBtn1 {
   font-size: 50px;
   cursor: pointer;
 }
 
-#testBtn:hover {
+#testBtn:hover, #testBtn1:hover {
   color: blue;
   background-color: gray;
 }
@@ -43,6 +44,10 @@
 <i onclick="myFunction2(this)" class="fa fa-thumbs-up"></i>
 <br>
 <div id="testBtn" class="btn btn-warning">test
+  <i id="theIcon" class="fa fa-angle-double-left"></i>
+</div>
+<br>
+<div id="testBtn1" class="btn btn-warning" onclick="myFunction3()">TEST
   <i id="theIcon" class="fa fa-angle-double-left"></i>
 </div>
 
@@ -64,6 +69,13 @@ $("#testBtn").click(function(){
   //alert("The div was clicked.");
   $(this).find('i').toggleClass('fa-angle-double-left fa-angle-double-right')
 });
+
+function myFunction3() {
+  var x = document.getElementById("testBtn1").firstElementChild
+  x.classList.toggle("fa-angle-double-down")
+  
+}
+
 
 </script>
 </body>
