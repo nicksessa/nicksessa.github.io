@@ -45,8 +45,9 @@ a.anchor {
     padding: 15px 10px;
     background: #fff;
     background: #38526F;
+    background: linear-gradient(to right, #0099cc , #203042);
     color: #fff;
-/*background-image: linear-gradient(to right, lightblue , navy);*/
+/*background-image: linear-gradient(to right, #38526F , #203042);*/
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
